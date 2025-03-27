@@ -3,6 +3,34 @@
 @section('content')
     <div class="container mt-2">
         <x-navbar title="Daftar Zakat" />
+
+        <div class="row mb-2">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="title">Zakat Sah</h5>
+                    </div>
+
+                    <div class="card-body">
+                        <h2>{{ $approve_zakat }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="title">Tidak Sah Zakat</h5>
+                    </div>
+
+                    <div class="card-body">
+                        <h2>{{ $cancel_zakat }}</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <div class="d-flex align-items-center justify-content-end mt-3">
             {{-- <h2 class="mb-4">Daftar Zakat</h2> --}}
             <a href="{{ route('zakats.create') }}" class="btn btn-primary mb-3">Tambah Zakat</a>

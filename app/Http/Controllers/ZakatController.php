@@ -12,7 +12,17 @@ class ZakatController extends Controller
     public function index()
     {
         $zakats = Zakat::latest()->paginate(10);
-        return view('zakats.index', compact('zakats'));
+        $zakat = Zakat::all();
+        $approve_zakat = 0;
+        $cancel_zakat = 0;
+        foreach ($zakat as $item) {
+            if ($item->status == 'approved') {
+                $approve_zakat += $item->amount;
+            } else {
+                $cancel_zakat += $item->amount;
+            }
+        }
+        return view('zakats.index', compact('zakats', 'approve_zakat', 'cancel_zakat'));
     }
 
     public function create()
