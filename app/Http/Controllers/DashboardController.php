@@ -20,7 +20,17 @@ class DashboardController extends Controller
             }
         }
 
+        // Statistik zakat approved per hari
+        $zakat_per_day = Zakat::where('status', 'approved')
+            ->selectRaw('DATE(created_at) as date, SUM(amount) as total')
+            ->groupBy('date')
+            ->orderBy('date', 'ASC')
+            ->get();
+
+        $labels = $zakat_per_day->pluck('date')->toArray();
+        $data = $zakat_per_day->pluck('total')->toArray();
+
         // dd($count_zakat);
-        return view('dashboard', compact('approve_zakat', 'cancel_zakat'));
+        return view('dashboard', compact('approve_zakat', 'cancel_zakat', 'labels', 'data'));
     }
 }
