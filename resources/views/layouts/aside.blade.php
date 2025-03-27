@@ -4,7 +4,7 @@
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand" href="">
-            <h4 class="me-1 font-weight-bold">Zakat Darul Muttaqin</h4>
+            <h4 class="font-weight-bold">Zakat DM</h4>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
