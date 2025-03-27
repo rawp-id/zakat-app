@@ -61,6 +61,10 @@ class ZakatController extends Controller
 
         Zakat::create($data);
 
+        if($user->is_admin) {
+            return redirect()->route('zakats.confirm')->with('success', 'Zakat berhasil ditambahkan.');
+        }
+
         return redirect()->route('zakats.index')->with('success', 'Zakat berhasil ditambahkan.');
     }
 

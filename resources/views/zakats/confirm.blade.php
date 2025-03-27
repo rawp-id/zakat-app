@@ -7,6 +7,11 @@
         </div> --}}
         <x-navbar title="Konfirmasi Zakat" />
 
+        <div class="d-flex align-items-center justify-content-end mt-3">
+            {{-- <h2 class="mb-4">Daftar Zakat</h2> --}}
+            <a href="{{ route('zakats.create') }}" class="btn btn-primary mb-3">Tambah Zakat</a>
+        </div>
+
         <div class="card">
             <div class="card-body">
                 @if (session('success'))
@@ -18,7 +23,7 @@
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Nama</th>
-                                <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Telepon</th>
+                                {{-- <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Telepon</th> --}}
                                 <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Jumlah</th>
                                 <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Aksi</th>
                             </tr>
@@ -27,7 +32,7 @@
                             @foreach ($pendingZakats as $zakat)
                                 <tr>
                                     <td>{{ $zakat->name }}</td>
-                                    <td>{{ $zakat->phone }}</td>
+                                    {{-- <td>{{ $zakat->phone }}</td> --}}
                                     <td>{{ number_format($zakat->amount) }}</td>
                                     <td>
                                         <form action="{{ route('zakats.approve', $zakat->id) }}" method="POST"

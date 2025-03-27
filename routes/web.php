@@ -26,3 +26,5 @@ Route::resource('zakats', ZakatController::class)->middleware('auth');
 
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::post('/users/{user}/update', [UserController::class, 'update'])->name('users.update');
+
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');

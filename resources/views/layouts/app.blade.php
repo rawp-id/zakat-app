@@ -71,7 +71,7 @@
             }
         }
     </style>
-    @vite([''])
+    {{-- @vite(['']) --}}
 </head>
 
 <body class="g-sidenav-show dark-version bg-gray-600">

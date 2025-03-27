@@ -22,7 +22,7 @@
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Nama</th>
-                                <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Telepon</th>
+                                {{-- <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Telepon</th> --}}
                                 <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Jumlah</th>
                                 <th class="text-uppercase text-secondary font-weight-bolder opacity-7">Status</th>
                                 @if (Auth::user()->master)
@@ -34,7 +34,7 @@
                             @foreach ($zakats as $zakat)
                                 <tr>
                                     <td>{{ $zakat->name }}</td>
-                                    <td>{{ $zakat->phone }}</td>
+                                    {{-- <td>{{ $zakat->phone }}</td> --}}
                                     <td>{{ number_format($zakat->amount) }}</td>
                                     <td><span
                                             class="badge bg-{{ $zakat->status == 'pending' ? 'warning' : ($zakat->status == 'approved' ? 'success' : 'danger') }}">
@@ -43,8 +43,8 @@
                                     @if (Auth::user()->master)
                                         <td>
                                             <div class="mt-3">
-                                                <a href="{{ route('zakats.show', $zakat) }}"
-                                                    class="btn btn-info btn-sm">Lihat</a>
+                                                {{-- <a href="{{ route('zakats.show', $zakat) }}" --}}
+                                                {{--     class="btn btn-info btn-sm">Lihat</a> --}}
                                                 <a href="{{ route('zakats.edit', $zakat) }}"
                                                     class="btn btn-warning btn-sm">Edit</a>
                                                 <form action="{{ route('zakats.destroy', $zakat) }}" method="POST"
