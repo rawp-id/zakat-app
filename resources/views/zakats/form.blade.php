@@ -5,7 +5,7 @@
         value="{{ old('name', $zakat->name ?? '') }}" required>
 </div>
 
-@if (!Auth::user()->is_admin || !Auth::user()->master)
+@if (!Auth::user()->is_admin && !Auth::user()->master)
     <div class="mb-4">
         <h6 class="">Telepon</h6>
         <input type="text" name="phone" class="form-control" placeholder="Masukan Nomor Telepon" value="{{ old('phone', $zakat->phone ?? '') }}"
