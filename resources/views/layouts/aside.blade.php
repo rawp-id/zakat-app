@@ -4,7 +4,7 @@
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href="">
-            <h4 class="ms-1 font-weight-bold">Zakat Darul Muttaqin</h4>
+            <h4 class="font-weight-bold">Zakat Darul Muttaqin</h4>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -12,7 +12,7 @@
         <ul class="navbar-nav">
             @if (Auth::user()->master)
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('dashboard')}}">
+                    <a class="nav-link" href="{{ route('dashboard') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-sm opacity-10"></i>
