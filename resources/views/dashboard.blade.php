@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container mt-4">
+    <div class="container mt-2">
+        <x-navbar title="Dashboard" />
         <div class="row">
             <div class="col">
                 <div class="card">
