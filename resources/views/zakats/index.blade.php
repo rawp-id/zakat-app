@@ -61,7 +61,7 @@
                         <tbody>
                             @foreach ($zakats as $zakat)
                                 <tr>
-                                    <td>{{ $zakat->name }}</td>
+                                    <td>{{ ucwords($zakat->name) }}</td>
                                     {{-- <td>{{ $zakat->phone }}</td> --}}
                                     <td>{{ number_format($zakat->amount) }}</td>
                                     <td><span
