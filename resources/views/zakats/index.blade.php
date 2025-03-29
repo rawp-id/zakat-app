@@ -12,7 +12,7 @@
                     </div>
 
                     <div class="card-body">
-                        <h2>{{ $approve_zakat }} ({{ $approve_zakat * 2.5 }})</h2>
+                        <h2>{{ $approve_zakat }} ({{ $approve_zakat * 2.5 }} KG)</h2>
                     </div>
                 </div>
             </div>
